@@ -1,0 +1,439 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.Parte1{
+
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.85),rgba(84, 84, 84, 0.85)), url(photo_2023-08-12_20-14-01.jpg);
+    background-size: cover;
+    background-position: center;
+    display: visible;
+}
+
+.Menu{
+
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Logo1{
+
+width: 15%;
+cursor: pointer;
+
+}
+
+.Menu ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.Menu ul li a{
+
+   text-decoration: none;
+   color: white;
+   font-family: sans-serif;
+}
+
+.Menu ul li::after{
+
+    content: '';
+    height: 3px;
+    width: 0;
+    background: yellow;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.Menu ul li:hover::after{
+    width: 100%;
+}
+
+#submenu{
+
+    display: none;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    top: 100%; /* Alinear el submenú debajo del elemento padre */
+    background-color: #333
+}
+
+.Menu li:hover #submenu{
+    display: block;
+    position: absolute;
+}
+
+#submenu li{
+    padding-top: 20px;
+}
+
+.Titulo{
+
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50);
+    text-align: center;
+    color: white;
+}
+
+.Titulo1{
+
+    font-size: 80px;
+    line-height: 100px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.Titulo p {
+
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-family: sans-serif;
+}
+
+button{
+    padding: 15px 25px;
+    margin: 20px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border:  2px solid yellow;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(to right, transparent 50%, #ffc107 50%);
+    background-size: 200%;
+    background-position: left;
+    transition: 0.5;
+}
+
+button:hover{
+
+    background-position: right;
+    color: black;
+}
+
+.field{
+    display: flex;
+    float: right;
+    margin-right: 850px;
+    width: 30px;
+    height: 30px;
+    flex-direction: row;
+    margin-top: -35px;
+    align-items: center;
+}
+.field>input[type=text],
+  .field>button {
+    display:block;
+    font:1.2em 'Montserrat Alternates';
+  }
+  
+  .field>input[type=text] {
+    flex:1;
+    padding:0.6em;
+    border:0.2em solid rgb(90, 90, 90);
+  }
+  
+  .field>button {
+    padding:0.6em 0.8em;
+    background-color:rgb(90, 90, 90);
+    color:white;
+    border:none;
+  }
+
+  .galeria{
+    font-family: 'open sans';
+  }
+
+  .galeria h1{
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 300;
+  }
+
+  .linea{
+    border-top: 5px solid #0077c0;
+    margin-bottom: 40px;
+  }
+
+  .contenedor-imagenes{
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+  }
+
+  .contenedor-imagenes .imagen{
+    width: 32%;
+    position: relative;
+    height: 250px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0 .75)
+
+  }
+
+  .imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .Libros-software{
+    background-color: white;
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 300;
+  }
+
+  .Libros-medicina{
+ 
+    background-color: white;
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 300;
+
+  }
+
+  .Libros-derecho{
+    background-color: white;
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 300;
+
+  }
+  .Libros-industrial{
+    background-color: white;
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 300;
+
+  }
+
+  .Libros-Educacion{
+    background-color: white;
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 300;
+
+  }
+
+  .overlay{
+position: absolute;
+bottom: 0;
+left: 0;
+background: rgba(0,118,192,0.781);
+width: 100%;
+height: 0;
+overflow: hidden;
+transition: .5s ease;
+}
+
+.overlay h2{
+    color: #fff;
+    font-weight: 300;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+
+}
+
+.overlay h2{
+
+    color: #fff;
+    font-weight: 300;
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay{
+    height: 100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px){
+    .contenedor-imagenes{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:700px){
+    .contenedor-imagenes{
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:450px){
+    h1{
+        font-size:22px;
+    }
+    .contenedor-imagenes{
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen{
+        width: 80%;
+    }
+}
+
+*{
+    margin: 0%;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+footer{
+    
+    width: 100%;
+    background: white;
+    color: white;
+}
+
+.container-footer-all{
+
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px;
+    padding: 40px;
+    background: black;
+}
+
+.container-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colum1{
+    max-width: 400px;
+}
+
+.colum1 h1{
+    font-size: 42px;
+    background-color: white;
+}
+
+.colum1 p{
+    font-size: 34px;
+    color: white;
+    margin-top: 20px;
+}
+
+.colum2{
+    max-width: 400px;
+}
+
+.colum2 h1{
+    font-size: 22px;
+}
+
+.row{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img{
+    width: 36px;
+    height: 36px;
+}
+
+.row label{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: white;
+}
+
+.colum3{
+    max-width: 400px;
+}
+
+.colum3 h1{
+    font-size: 22px;
+}
+
+.row2{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row2 img{
+    width: 36px;
+    height: 36px;
+}
+
+.row2 label{
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+}
+
+.container-footer{
+    width: 100%;  
+    background: white;
+}
+
+.footer{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+}
+
+.copyright{
+    color: #C7C7C7;  
+}
+
+.copyright a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.information a{
+    text-decoration: none;
+    color: #C7C7C7;
+}
+
+
+@media screen and (max-width: 1100px){
+    
+    .container-body{
+        flex-wrap: wrap;
+    }
+    
+    .colum1{
+        max-width: 100%;
+    }
+    
+    .colum2,
+    .colum3{
+        margin-top: 40px;
+    }
+}
+
+
+
